@@ -17,13 +17,13 @@ You need **Python** installed. You also need **Ollama** to run the AI model.
 * Pull the lightweight model (Run this in your terminal):
     ollama pull llama3.2:1b
 
-## to install requirements
+### to install requirements
     pip install -r requirements.txt
 
-## To run app file
+### To run app file
     python app.py
 
-## To test every file individully 
+### To test every file individully 
     python -m <file path>
     eg python -m src.logging
 

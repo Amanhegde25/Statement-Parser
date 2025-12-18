@@ -56,25 +56,25 @@ You need **Python** installed. You also need **Ollama** to run the AI model.
 * * Purpose: Houses reusable and production-ready code for ML pipelines.
 
 ### templates/
-    Likely contains template files used by the app (if there’s a web interface) such as:
+* Likely contains template files used by the app (if there’s a web interface) such as:
 * * HTML templates
 * * UI components
-    Purpose: Used for rendering front-end pages if the project includes a web app/visualization interface.
+* Purpose: Used for rendering front-end pages if the project includes a web app/visualization interface.
 
 ### app.py
-    A Python script — likely the entry point for running the application.
-    Typical roles might be:
-    Serving a model via an API (Flask, FastAPI, etc.)
-    Running a training/testing pipeline
-    Connecting UI templates with backend logic
+* A Python script — likely the entry point for running the application.
+* Typical roles might be:
+* Serving a model via an API (Flask, FastAPI, etc.)
+* Running a training/testing pipeline
+* Connecting UI templates with backend logic
 
 ### requirements.txt
-    Lists the Python packages/dependencies needed for the project.
-    Purpose: Allows others to install all required libraries in one step (e.g., pip install -r requirements.txt).
+* Lists the Python packages/dependencies needed for the project.
+* Purpose: Allows others to install all required libraries in one step (e.g., pip install -r requirements.txt).
 
 ### setup.py
-    A Python setup script that can make the project installable as a package.
-    Purpose:
+* A Python setup script that can make the project installable as a package.
+* Purpose:
 * * Defines metadata, dependencies, and packaging details.
 * * Enables pip install -r . for editable installs during development.
 

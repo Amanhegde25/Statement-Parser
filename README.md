@@ -42,7 +42,8 @@ You need **Python** installed. You also need **Ollama** to run the AI model.
     ├── requirements.txt
     ├── setup.py
     
-    Directory & File Explanations
+    
+## Directory & File Explanations
 
 ### logs/
 * all the logs are created here for checking the progress of the code and trobolshooting

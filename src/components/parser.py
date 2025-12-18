@@ -2,6 +2,7 @@ import pdfplumber
 import requests
 import json
 import sys
+import os
 from src.logger import logging
 from src.exception import CustomException 
 
@@ -104,8 +105,6 @@ class LocalAIParser:
             raise CustomException(e, sys)
         
 if __name__ == "__main__":
-    import os
-
     TEST_PDF = "eg_input\\391657900-SBI-statement-sample.pdf"  
     MODEL = "llama3.2:1b"    
     logging.info("Running LocalAIParser Standalone Test")

@@ -5,7 +5,6 @@
 * **AI Engine:** [Ollama](https://ollama.com/) (running `llama3.2:1b`)
 * **PDF Processing:** `pdfplumber` (Layout-preserving text extraction)
 * **Language:** Python 3.10+
----
 
 ## Installation & Setup
 
@@ -13,7 +12,7 @@
 You need **Python** installed. You also need **Ollama** to run the AI model.
 
 * Download Ollama: [ollama.com](https://ollama.com)
-* put in your environment variables
+* put in your environment variables:
     C:\Users\<username>\AppData\Local\Programs\Ollama
 * Pull the lightweight model (Run this in your terminal):
     ollama pull llama3.2:1b

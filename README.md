@@ -1,4 +1,6 @@
 ## Statement Parser
+A robust, AI-powered tool that extracts key financial data from unstructured credit card statements (PDFs).
+Unlike traditional parsers that rely on brittle Regex rules or expensive cloud APIs, this project uses Local Large Language Models (LLMs) to process sensitive financial data entirely offline. No data ever leaves your machine.
 
 ## Tech Stack
 * **Frontend:** [Flask](Python)
@@ -41,8 +43,7 @@ You need **Python** installed. You also need **Ollama** to run the AI model.
     ├── main.py
     ├── requirements.txt
     ├── setup.py
-    
-    
+
 ## Directory & File Explanations
 
 ### logs/

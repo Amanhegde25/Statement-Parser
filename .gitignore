@@ -135,9 +135,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-eg_input
-eg_input/
-eg_input-*/
+eg_input/Acct_Statement.pdf
 .env
 .envrc
 .venv

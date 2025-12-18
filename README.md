@@ -22,6 +22,7 @@ You need **Python** installed. You also need **Ollama** to run the AI model.
 
 ### To run app file
     python app.py
+* app will run in http://localhost:5000/
 
 ### To test every file individully 
     python -m <file path>

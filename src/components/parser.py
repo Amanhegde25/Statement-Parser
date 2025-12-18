@@ -38,20 +38,26 @@ class LocalAIParser:
                 return {"error": "Empty text. File might be an image."}
             
             prompt = f"""
-            You are a strict data extraction engine. Analyze the text below and extract 5 facts.
-            
+            You are a highly accurate financial data extraction engine. 
+            Analyze the bank statement text provided and extract the following information into a strict JSON format.
+
             INSTRUCTIONS:
-            1. Find the "Issuer" (Bank Name) at the very top of the document.
-            2. Find the "Account Number".
-            3. Find the "Statement Date".
-            4. Find the "Total Balance".
-            
-            RETURN ONLY JSON with these keys:
+            1. ISSUER: Look for the bank name or financial institution at the top.
+            2. ACCOUNT_LAST_4: Extract only the final 4 digits of the credit card or account number.
+            3. DATES: Convert all dates to YYYY-MM-DD format.
+            4. NUMBERS: Remove currency symbols ($, £, €) and commas. Ensure they are valid floats.
+            5. NULLS: If a field is not found, return null.
+            6. IFSC_CODE: unique code used by banks in India.
+
+            RETURN ONLY A JSON OBJECT WITH THESE KEYS:
             - "issuer": The exact name of the bank or provider as written in the text.
-            - "account_last_4": The last 4 digits of the account number.
-            - "statement_date": Date in YYYY-MM-DD.
-            - "due_date": Date in YYYY-MM-DD (or null).
-            - "total_balance": Numeric value (e.g. 1234.50).
+            - "IFSC_code": The IFSC code if available, else null.
+            - "account_last_4": String of 4 digits.
+            - "statement_date": YYYY-MM-DD.
+            - "due_date": YYYY-MM-DD.
+            - "total_balance": Numeric (e.g., 1250.75).
+            - "minimum_payment": Numeric (e.g., 35.00).
+            - "currency": The 3-letter currency code (e.g., USD, GBP, INR).
 
             TEXT TO ANALYZE:
             {raw_text[:2500]}
